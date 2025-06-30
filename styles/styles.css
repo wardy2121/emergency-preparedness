@@ -1,136 +1,197 @@
-/* General Page Styles */
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
+  background-color: #e8eae6;
   margin: 0;
-  background-color: #f9f9f9;
+  padding: 0;
   color: #333;
-  line-height: 1.6;
 }
 
-/* Header */
 header {
-  display: flex;
-  flex-direction: column; /* Stack logo and nav vertically */
-  align-items: center;    /* Center horizontally */
-  background-color: #004d40;
-  padding: 15px 20px;
+  background-color: #226b35;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-decoration: none;
+  font-family: "Rock Salt", cursive;
+  font-size: 1.7rem;
   color: white;
-}
-
-/* Navigation */
-nav {
-  display: flex;
-  gap: 30px;  /* Space between buttons */
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav a {
-  font-size: 1.3rem;       /* Bigger font */
-  padding: 10px 20px;      /* Bigger clickable area */
-  background-color: #00796b;
-  border-radius: 6px;
-  color: white;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.3rem;
   text-decoration: none;
-  font-weight: bold;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  background-color: #004d40;
+nav a:hover,
+nav a:focus {
+  background-color: #0a441a;
+  color: #a7d48c;
 }
 
-/* Main Content */
 main {
-  padding: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Headings */
 h1 {
-  color: #004d40;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #26521c;
 }
 
 h3 {
-  margin-top: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #3e5e32;
+  margin-bottom: 30px;
 }
 
-/* Summary Table */
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 30px;
+  margin-bottom: 35px;
 }
 
-th, td {
+th,
+td {
+  padding: 12px 20px;
   border: 1px solid #ccc;
-  padding: 12px;
-  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  vertical-align: middle;
 }
 
 th {
-  background-color: #eee;
+  background-color: #6b8e23;
+  color: white;
 }
 
-a.month-link {
-  color: #0066cc;
+tbody tr:nth-child(even) {
+  background-color: #f0f6e7;
+}
+
+tbody tr:hover {
+  background-color: #dde8c8;
+}
+
+.month-link {
   text-decoration: none;
+  color: #407020;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
-a.month-link:hover {
+.month-link:hover,
+.month-link:focus {
+  color: #85b15d;
   text-decoration: underline;
 }
 
-/* Informational Note Box */
+/* Note Section */
 .note {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #e0f7fa;
-  border-left: 5px solid #00838f;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background-color: #d9e7b5;
+  padding: 18px 25px;
+  border-radius: 15px;
+  border: 2px solid #a0bb52;
+  color: #3f5115;
 }
 
-/* Image float styles */
-img.float-left {
+/* Image Float Styles */
+.img-left {
   float: left;
-  width: 200px;        /* Adjust as needed */
+  margin: 0 15px 15px 0;
+  max-width: 200px;
+  width: 100%;
   height: auto;
-  margin: 0 15px 15px 0; /* space on right and bottom */
 }
 
-img.float-right {
+.img-right {
   float: right;
-  width: 200px;        /* Adjust as needed */
+  margin: 0 0 15px 15px;
+  max-width: 200px;
+  width: 100%;
   height: auto;
-  margin: 0 0 15px 15px; /* space on left and bottom */
 }
 
-/* Clear floats after paragraphs container */
+/* Clearfix for floated elements */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Container to make the table scrollable on small screens */
-.home-table-container {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-}
-
-/* Optional: Reduce padding/spacing on small devices for better fit */
+/* Responsive Styles */
 @media (max-width: 600px) {
-  table {
-    font-size: 0.85rem;
+  body {
+    padding: 10px;
   }
 
-  th, td {
-    padding: 6px 8px;
-    white-space: normal;
-    word-break: break-word;
+  header {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 8px 10px;
+    font-size: 1.1rem;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 15px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.9rem;
+  }
+
+  /* Make images stack nicely on mobile */
+  .img-left,
+  .img-right {
+    float: none;
+    display: block;
+    margin: 10px auto 15px auto;
+    max-width: 90%;
+    width: auto;
   }
 }
