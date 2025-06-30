@@ -134,6 +134,19 @@ a.month-link:hover {
     padding: 6px 8px;
     white-space: normal;
     word-break: break-word;
+    overflow-wrap: break-word;  /* lets long words break to next line */
+    hyphens: auto;              /* adds hyphens when breaking words if supported */
+  }
+
+  /* Prevent month names from breaking or wrapping */
+  td:first-child,
+  td:first-child a.month-link {
+    white-space: nowrap;
+  }
+
+  /* Optional: smaller font for table links */
+  a.month-link {
+    font-size: 0.9rem;
   }
 }
 
