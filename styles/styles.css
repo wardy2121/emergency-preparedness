@@ -115,3 +115,22 @@ img.float-right {
   display: table;
   clear: both;
 }
+
+/* Container to make the table scrollable on small screens */
+.home-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Optional: Reduce padding/spacing on small devices for better fit */
+@media (max-width: 600px) {
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 6px 8px;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
