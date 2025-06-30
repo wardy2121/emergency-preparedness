@@ -1,132 +1,127 @@
-/* Global Styles */
+/* General Page Styles */
 body {
-  font-family: "Raleway", sans-serif;
-  background-color: #e8eae6;
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  background-color: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
-  background-color: #226b35;
-  color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0;
+  flex-direction: column; /* Stack logo and nav vertically */
+  align-items: center;    /* Center horizontally */
+  background-color: #004d40;
+  padding: 15px 20px;
+  color: white;
 }
 
 .logo {
-  font-family: "Rock Salt", cursive;
-  font-size: 1.7rem;
-  color: white;
-  text-decoration: none;
+  font-size: 1.8rem;
   font-weight: bold;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 30px;  /* Space between buttons */
 }
 
 nav a {
-  margin: 0 20px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  text-decoration: none;
+  font-size: 1.3rem;       /* Bigger font */
+  padding: 10px 20px;      /* Bigger clickable area */
+  background-color: #00796b;
+  border-radius: 6px;
   color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus {
-  background-color: #0a441a;
-  color: #a7d48c;
+nav a:hover {
+  background-color: #004d40;
 }
 
+/* Main Content */
 main {
-  max-width: 900px;
-  margin: 40px auto;
-  background-color: white;
-  border-radius: 15px;
-  padding: 25px 30px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
+/* Headings */
 h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  color: #26521c;
+  color: #004d40;
 }
 
 h3 {
-  font-weight: 600;
-  font-size: 1.5rem;
-  text-align: center;
-  color: #3e5e32;
-  margin-bottom: 30px;
+  margin-top: 0;
 }
 
-p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-/* Table Styles */
+/* Summary Table */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 35px;
+  margin-top: 30px;
 }
 
-th,
-td {
-  padding: 12px 20px;
+th, td {
   border: 1px solid #ccc;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-align: center;
-  vertical-align: middle;
+  padding: 12px;
+  text-align: left;
 }
 
 th {
-  background-color: #6b8e23;
-  color: white;
+  background-color: #eee;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f0f6e7;
-}
-
-tbody tr:hover {
-  background-color: #dde8c8;
-}
-
-.month-link {
+a.month-link {
+  color: #0066cc;
   text-decoration: none;
-  color: #407020;
-  font-weight: 700;
-  transition: color 0.3s ease;
 }
 
-.month-link:hover,
-.month-link:focus {
-  color: #85b15d;
+a.month-link:hover {
   text-decoration: underline;
 }
 
-/* Note Section */
+/* Informational Note Box */
 .note {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  background-color: #d9e7b5;
-  padding: 18px 25px;
-  border-radius: 15px;
-  border: 2px solid #a0bb52;
-  color: #3f5115;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-left: 5px solid #00838f;
 }
 
-/* Image Float Styles */
+/* Image float styles */
+img.float-left {
+  float: left;
+  width: 200px;        /* Adjust as needed */
+  height: auto;
+  margin: 0 15px 15px 0; /* space on right and bottom */
+}
+
+img.float-right {
+  float: right;
+  width: 200px;        /* Adjust as needed */
+  height: auto;
+  margin: 0 0 15px 15px; /* space on left and bottom */
+}
+
+/* Clear floats after paragraphs container */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Container to make the table scrollable on small screens */
+.home-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
 .img-left {
   float: left;
   margin: 0 15px 15px 0;
@@ -143,55 +138,22 @@ tbody tr:hover {
   height: auto;
 }
 
-/* Clearfix for floated elements */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive Styles */
+
+/* Optional: Reduce padding/spacing on small devices for better fit */
 @media (max-width: 600px) {
-  body {
-    padding: 10px;
+  table {
+    font-size: 0.85rem;
   }
 
-  header {
-    flex-direction: column;
-    padding: 10px 0;
-  }
-
-  nav a {
-    margin: 8px 10px;
-    font-size: 1.1rem;
-  }
-
-  main {
-    margin: 20px auto;
-    padding: 15px 20px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  table,
-  th,
-  td {
-    font-size: 0.9rem;
-  }
-
-  /* Make images stack nicely on mobile */
-  .img-left,
-  .img-right {
-    float: none;
-    display: block;
-    margin: 10px auto 15px auto;
-    max-width: 90%;
-    width: auto;
+  th, td {
+    padding: 6px 8px;
+    white-space: normal;
+    word-break: break-word;
   }
 }
