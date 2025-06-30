@@ -65,6 +65,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 30px;
+  background-color: #f5f9f9; /* light overall background */
+  /* added here per new request */
 }
 
 th, td {
@@ -77,13 +79,37 @@ th {
   background-color: #eee;
 }
 
+/* Alternate row colors */
+tbody tr:nth-child(odd) {
+  background-color: #e8f0f0; /* light teal */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff; /* white */
+}
+
 a.month-link {
   color: #0066cc;
   text-decoration: none;
+  /* base styles overridden by button styles below */
+  /* keep color and decoration for fallback */
+}
+
+/* Month links styled as buttons */
+a.month-link {
+  display: inline-block;
+  background-color: #00796b; /* matches nav button bg */
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 a.month-link:hover {
-  text-decoration: underline;
+  background-color: #004d40; /* matches nav hover */
+  text-decoration: none;
 }
 
 /* Informational Note Box */
