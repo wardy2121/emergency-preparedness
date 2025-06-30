@@ -1,0 +1,117 @@
+/* General Page Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column; /* Stack logo and nav vertically */
+  align-items: center;    /* Center horizontally */
+  background-color: #004d40;
+  padding: 15px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 30px;  /* Space between buttons */
+}
+
+nav a {
+  font-size: 1.3rem;       /* Bigger font */
+  padding: 10px 20px;      /* Bigger clickable area */
+  background-color: #00796b;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #004d40;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+/* Headings */
+h1 {
+  color: #004d40;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+/* Summary Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #eee;
+}
+
+a.month-link {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a.month-link:hover {
+  text-decoration: underline;
+}
+
+/* Informational Note Box */
+.note {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-left: 5px solid #00838f;
+}
+
+/* Image float styles */
+img.float-left {
+  float: left;
+  width: 200px;        /* Adjust as needed */
+  height: auto;
+  margin: 0 15px 15px 0; /* space on right and bottom */
+}
+
+img.float-right {
+  float: right;
+  width: 200px;        /* Adjust as needed */
+  height: auto;
+  margin: 0 0 15px 15px; /* space on left and bottom */
+}
+
+/* Clear floats after paragraphs container */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
