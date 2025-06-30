@@ -95,33 +95,6 @@ a.month-link:hover {
 }
 
 /* Image float styles */
-img.float-left {
-  float: left;
-  width: 200px;        /* Adjust as needed */
-  height: auto;
-  margin: 0 15px 15px 0; /* space on right and bottom */
-}
-
-img.float-right {
-  float: right;
-  width: 200px;        /* Adjust as needed */
-  height: auto;
-  margin: 0 0 15px 15px; /* space on left and bottom */
-}
-
-/* Clear floats after paragraphs container */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Container to make the table scrollable on small screens */
-.home-table-container {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-}
-
 .img-left {
   float: left;
   margin: 0 15px 15px 0;
@@ -138,12 +111,18 @@ img.float-right {
   height: auto;
 }
 
+/* Clear floats after paragraphs container */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Container to make the table scrollable on small screens */
+.home-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
 
 /* Optional: Reduce padding/spacing on small devices for better fit */
 @media (max-width: 600px) {
@@ -155,5 +134,19 @@ img.float-right {
     padding: 6px 8px;
     white-space: normal;
     word-break: break-word;
+  }
+}
+
+/* New additions for better float containment and smaller images on very small screens */
+
+/* Ensure paragraphs wrap nicely around floated images */
+p.clearfix {
+  overflow: hidden; /* helps contain floats */
+}
+
+/* Slightly smaller max-width for images on very small screens */
+@media (max-width: 400px) {
+  .img-left, .img-right {
+    max-width: 150px;
   }
 }
