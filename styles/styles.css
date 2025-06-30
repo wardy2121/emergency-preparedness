@@ -29,6 +29,7 @@ header {
 nav {
   display: flex;
   gap: 30px;  /* Space between buttons */
+  align-items: stretch;
 }
 
 nav a {
@@ -44,6 +45,8 @@ nav a {
   align-items: center;
   justify-content: center;
   height: 100%;
+  flex: 1 1 auto;
+  min-height: 48px;
 }
 
 nav a:hover {
