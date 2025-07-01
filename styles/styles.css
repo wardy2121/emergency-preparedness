@@ -248,25 +248,35 @@ p.clearfix {
   }
 }
 
+/* Updated Mobile Header Styles */
 @media (max-width: 600px) {
-  .logo-container img {
-    height: 30px; /* smaller logo height for mobile */
-  }
-
-  .header-title {
-    font-size: 1.3rem; /* reduce title size slightly if needed */
-  }
-
   header {
-    flex-direction: column;
+    flex-direction: row; /* keep logo and title side by side */
     align-items: center;
-    text-align: center;
+    justify-content: flex-start; /* align left */
+    text-align: left;
+  }
+
+  .logo-container img {
+    height: 40px; /* smaller logo */
+    width: auto;
   }
 
   .logo-container {
-    margin-bottom: 10px;
+    margin-right: 15px; /* space between logo and title */
+  }
+
+  .header-content {
+    align-items: flex-start; /* align title and nav left */
+  }
+
+  .header-title {
+    font-size: 1.3rem; /* smaller title on mobile */
+    margin-bottom: 0;
+  }
+
+  nav {
+    justify-content: flex-start; 
+    gap: 15px;
   }
 }
-
-
-
