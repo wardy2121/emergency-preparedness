@@ -294,3 +294,10 @@ p.clearfix {
   }
 }
 
+@media (max-width: 600px) {
+  .logo-container {
+    display: none !important;
+  }
+}
+
+
