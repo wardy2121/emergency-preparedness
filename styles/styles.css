@@ -248,5 +248,25 @@ p.clearfix {
   }
 }
 
+@media (max-width: 600px) {
+  .logo-container img {
+    height: 30px; /* smaller logo height for mobile */
+  }
+
+  .header-title {
+    font-size: 1.3rem; /* reduce title size slightly if needed */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+}
+
 
 
