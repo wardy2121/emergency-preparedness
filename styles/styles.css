@@ -39,6 +39,7 @@ header {
   align-items: center;
   justify-content: center;
   min-width: 200px; /* avoid too narrow */
+  flex-shrink: 1;
 }
 
 /* Title styling */
@@ -234,26 +235,13 @@ footer {
   a.month-link {
     font-size: 0.9rem;
   }
-}
 
-/* Ensure paragraphs wrap nicely around floated images */
-p.clearfix {
-  overflow: hidden;
-}
-
-/* Smaller max-width for images on very small screens */
-@media (max-width: 400px) {
-  .img-left, .img-right {
-    max-width: 150px;
-  }
-}
-
-/* Updated Mobile Header Styles */
-@media (max-width: 600px) {
+  /* Mobile header styles */
   header {
-    flex-direction: row; /* keep logo and title side by side */
+    flex-direction: row;
+    flex-wrap: nowrap; /* prevent wrapping */
     align-items: center;
-    justify-content: flex-start; /* align left */
+    justify-content: flex-start;
     text-align: left;
   }
 
@@ -268,15 +256,35 @@ p.clearfix {
 
   .header-content {
     align-items: flex-start; /* align title and nav left */
+    min-width: unset; /* allow shrinking */
+    max-width: calc(100% - 60px); /* leave space for logo */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .header-title {
     font-size: 1.3rem; /* smaller title on mobile */
     margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   nav {
-    justify-content: flex-start; 
+    justify-content: flex-start;
     gap: 15px;
+  }
+}
+
+/* Ensure paragraphs wrap nicely around floated images */
+p.clearfix {
+  overflow: hidden;
+}
+
+/* Smaller max-width for images on very small screens */
+@media (max-width: 400px) {
+  .img-left, .img-right {
+    max-width: 150px;
   }
 }
