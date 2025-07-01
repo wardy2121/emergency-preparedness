@@ -14,7 +14,7 @@ header {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo left, rest on right */
+  justify-content: space-between;
   flex-wrap: wrap;
   min-height: 70px;
   box-sizing: border-box;
@@ -26,19 +26,19 @@ header {
 }
 
 .logo-container img {
-  height: 150px; /* balanced size */
+  height: 150px;
   width: auto;
   display: block;
 }
 
-/* Title and nav container on the right, stacked vertically and centered */
+/* Title and nav container */
 .header-content {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 200px; /* avoid too narrow */
+  min-width: 200px;
   flex-shrink: 1;
 }
 
@@ -52,7 +52,7 @@ header {
   user-select: none;
 }
 
-/* Navigation buttons centered */
+/* Navigation buttons */
 nav {
   display: flex;
   justify-content: center;
@@ -60,7 +60,6 @@ nav {
   width: 100%;
 }
 
-/* Buttons styling */
 nav a {
   font-size: 1.3rem;
   padding: 10px 20px;
@@ -85,7 +84,6 @@ main {
   padding: 20px;
 }
 
-/* Headings */
 h1 {
   color: #004d40;
 }
@@ -94,12 +92,12 @@ h3 {
   margin-top: 0;
 }
 
-/* Summary Table */
+/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 30px;
-  background-color: #f5f9f9; /* light overall background */
+  background-color: #f5f9f9;
 }
 
 th, td {
@@ -112,24 +110,17 @@ th {
   background-color: #eee;
 }
 
-/* Alternate row colors */
 tbody tr:nth-child(odd) {
-  background-color: #e8f0f0; /* light teal */
+  background-color: #e8f0f0;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #ffffff; /* white */
+  background-color: #ffffff;
 }
 
-a.month-link {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-/* Month links styled as buttons */
 a.month-link {
   display: inline-block;
-  background-color: #00796b; /* matches nav button bg */
+  background-color: #00796b;
   color: white !important;
   padding: 8px 16px;
   border-radius: 6px;
@@ -139,8 +130,7 @@ a.month-link {
 }
 
 a.month-link:hover {
-  background-color: #004d40; /* matches nav hover */
-  text-decoration: none;
+  background-color: #004d40;
 }
 
 /* Informational Note Box */
@@ -151,7 +141,7 @@ a.month-link:hover {
   border-left: 5px solid #00838f;
 }
 
-/* Image float styles */
+/* Floated images */
 .img-left {
   float: left;
   margin: 0 15px 15px 0;
@@ -168,26 +158,26 @@ a.month-link:hover {
   height: auto;
 }
 
-/* Clear floats after paragraphs container */
+/* Clear floats */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Container to make the table scrollable on small screens */
+/* Responsive Table */
 .home-table-container {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
+/* Footer */
 footer {
   background-color: #004d40;
   color: white;
   padding: 15px 20px;
   font-size: 0.9rem;
   margin-top: 40px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -195,12 +185,10 @@ footer {
   box-sizing: border-box;
 }
 
-/* Footer left text */
 .footer-left {
   margin: 0;
 }
 
-/* Footer right link */
 .footer-right {
   color: #a0e9d7;
   text-decoration: none;
@@ -211,7 +199,7 @@ footer {
   text-decoration: underline;
 }
 
-/* Optional: Reduce padding/spacing on small devices for better fit */
+/* Smaller screen adjustments */
 @media (max-width: 600px) {
   table {
     font-size: 0.85rem;
@@ -225,77 +213,45 @@ footer {
     hyphens: auto;
   }
 
-  /* Prevent month names from breaking or wrapping */
   td:first-child,
   td:first-child a.month-link {
     white-space: nowrap;
   }
 
-  /* Smaller font for table links */
   a.month-link {
     font-size: 0.9rem;
   }
 
-  /* Mobile header styles */
+  /* STACK HEADER: logo on top, then title, then nav */
   header {
-    flex-direction: row;
-    flex-wrap: nowrap; /* prevent wrapping */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    text-align: left;
+    text-align: center;
   }
 
   .logo-container img {
-    height: 40px; /* smaller logo */
-    width: auto;
-  }
-
-  .logo-container {
-    margin-right: 15px; /* space between logo and title */
+    height: 10px;
+    margin-bottom: 10px;
   }
 
   .header-content {
-    align-items: flex-start; /* align title and nav left */
-    min-width: unset; /* allow shrinking */
-    max-width: calc(100% - 60px); /* leave space for logo */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    align-items: center;
   }
 
   .header-title {
-    font-size: 1.3rem; /* smaller title on mobile */
-    margin-bottom: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
   }
 
   nav {
-    justify-content: flex-start;
-    gap: 15px;
-  }
-
-  /* Hide logo on mobile */
-  .logo-container {
-    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
 
-/* Ensure paragraphs wrap nicely around floated images */
-p.clearfix {
-  overflow: hidden;
-}
-
-/* Smaller max-width for images on very smalls screens */
+/* Smaller floated images */
 @media (max-width: 400px) {
   .img-left, .img-right {
     max-width: 150px;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo-container {
-    display: none !important;
   }
 }
