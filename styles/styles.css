@@ -275,6 +275,11 @@ footer {
     justify-content: flex-start;
     gap: 15px;
   }
+
+  /* Hide logo on mobile */
+  .logo-container {
+    display: none;
+  }
 }
 
 /* Ensure paragraphs wrap nicely around floated images */
@@ -288,3 +293,4 @@ p.clearfix {
     max-width: 150px;
   }
 }
+
