@@ -7,50 +7,76 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* Header container */
 header {
-  display: flex;
-  flex-direction: column; /* Stack logo and nav vertically */
-  align-items: center;    /* Center horizontally */
   background-color: #004d40;
   padding: 15px 20px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, rest on right */
+  flex-wrap: wrap;
+  min-height: 70px;
+  box-sizing: border-box;
 }
 
-.logo {
+/* Logo container aligned left */
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo-container img {
+  height: 150px; /* balanced size */
+  width: auto;
+  display: block;
+}
+
+/* Title and nav container on the right, stacked vertically and centered */
+.header-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px; /* avoid too narrow */
+}
+
+/* Title styling */
+.header-title {
   font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 15px;
-  text-decoration: none;
-  color: white;
+  margin: 0 0 10px 0;
+  color: #a0e9d7;
+  text-align: center;
+  user-select: none;
 }
 
-/* Navigation */
+/* Navigation buttons centered */
 nav {
   display: flex;
-  gap: 30px;  /* Space between buttons */
-  align-items: stretch;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
 }
 
+/* Buttons styling */
 nav a {
-  font-size: 1.3rem;       /* Bigger font */
-  padding: 10px 20px;      /* Bigger clickable area */
+  font-size: 1.3rem;
+  padding: 10px 20px;
   background-color: #00796b;
   border-radius: 6px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  flex: 1 1 auto;
-  min-height: 48px;
 }
 
 nav a:hover {
-  background-color: #004d40;
+  background-color: #003d33;
 }
 
 /* Main Content */
@@ -73,7 +99,6 @@ table {
   border-collapse: collapse;
   margin-top: 30px;
   background-color: #f5f9f9; /* light overall background */
-  /* added here per new request */
 }
 
 th, td {
@@ -98,8 +123,6 @@ tbody tr:nth-child(even) {
 a.month-link {
   color: #0066cc;
   text-decoration: none;
-  /* base styles overridden by button styles below */
-  /* keep color and decoration for fallback */
 }
 
 /* Month links styled as buttons */
@@ -157,6 +180,36 @@ a.month-link:hover {
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
+footer {
+  background-color: #004d40;
+  color: white;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Footer left text */
+.footer-left {
+  margin: 0;
+}
+
+/* Footer right link */
+.footer-right {
+  color: #a0e9d7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-right:hover {
+  text-decoration: underline;
+}
+
 /* Optional: Reduce padding/spacing on small devices for better fit */
 @media (max-width: 600px) {
   table {
@@ -167,8 +220,8 @@ a.month-link:hover {
     padding: 6px 8px;
     white-space: normal;
     word-break: break-word;
-    overflow-wrap: break-word;  /* lets long words break to next line */
-    hyphens: auto;              /* adds hyphens when breaking words if supported */
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   /* Prevent month names from breaking or wrapping */
@@ -177,22 +230,23 @@ a.month-link:hover {
     white-space: nowrap;
   }
 
-  /* Optional: smaller font for table links */
+  /* Smaller font for table links */
   a.month-link {
     font-size: 0.9rem;
   }
 }
 
-/* New additions for better float containment and smaller images on very small screens */
-
 /* Ensure paragraphs wrap nicely around floated images */
 p.clearfix {
-  overflow: hidden; /* helps contain floats */
+  overflow: hidden;
 }
 
-/* Slightly smaller max-width for images on very small screens */
+/* Smaller max-width for images on very small screens */
 @media (max-width: 400px) {
   .img-left, .img-right {
     max-width: 150px;
   }
 }
+
+
+
