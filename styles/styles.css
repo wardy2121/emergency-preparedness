@@ -1,17 +1,24 @@
 /* General Page Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0 auto;               /* center horizontally */
-  max-width: 1200px;            /* max width for large screens */
-  padding-left: 20px;           /* some side padding so content doesn't hug edges */
-  padding-right: 20px;
-  background-color: #f0f6f5;    /* light tealish color from your palette for outer background */
+  margin: 0;
+  background-color: #00838f; /* Margin background color */
   color: #333;
   line-height: 1.6;
-  box-sizing: border-box;       /* ensures padding included in width */
+  box-sizing: border-box;
 }
 
-/* Header container */
+/* Constrain main content (but not header/footer) */
+body > *:not(header):not(footer) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f0f6f5; /* Content background */
+  box-sizing: border-box;
+}
+
+/* Header */
 header {
   background-color: #004d40;
   padding: 15px 20px;
@@ -24,7 +31,7 @@ header {
   box-sizing: border-box;
 }
 
-/* Logo container aligned left */
+/* Logo */
 .logo-container {
   flex: 0 0 auto;
 }
@@ -35,7 +42,7 @@ header {
   display: block;
 }
 
-/* Title and nav container */
+/* Header Title and Nav */
 .header-content {
   flex: 1 1 auto;
   display: flex;
@@ -46,7 +53,6 @@ header {
   flex-shrink: 1;
 }
 
-/* Title styling */
 .header-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -56,7 +62,7 @@ header {
   user-select: none;
 }
 
-/* Navigation buttons */
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -122,6 +128,7 @@ tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
 
+/* Month Buttons */
 a.month-link {
   display: inline-block;
   background-color: #00796b;
@@ -137,7 +144,7 @@ a.month-link:hover {
   background-color: #004d40;
 }
 
-/* Informational Note Box */
+/* Note Box */
 .note {
   margin-top: 40px;
   padding: 20px;
@@ -145,7 +152,7 @@ a.month-link:hover {
   border-left: 5px solid #00838f;
 }
 
-/* Floated images */
+/* Floated Images */
 .img-left {
   float: left;
   margin: 0 15px 15px 0;
@@ -162,14 +169,14 @@ a.month-link:hover {
   height: auto;
 }
 
-/* Clear floats */
+/* Clear Floats */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive Table */
+/* Responsive Table Wrapper */
 .home-table-container {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -203,17 +210,10 @@ footer {
   text-decoration: underline;
 }
 
-/* Smaller screen adjustments */
+/* Mobile Adjustments */
 @media (max-width: 600px) {
   table {
     font-size: 0.85rem;
-  }
-
-  body {
-    margin 0;
-    padding-left: 0px;
-    padding-right: 0px;
-    max-width: 100%;
   }
 
   th, td {
@@ -233,7 +233,7 @@ footer {
     font-size: 0.9rem;
   }
 
-  /* STACK HEADER: logo on top, then title, then nav */
+  /* Stack Header Layout */
   header {
     flex-direction: column;
     align-items: center;
@@ -258,11 +258,19 @@ footer {
     flex-wrap: wrap;
     gap: 10px;
   }
+
+  /* Remove margins on mobile */
+  body > *:not(header):not(footer) {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /* Smaller floated images */
 @media (max-width: 400px) {
-  .img-left, .img-right {
+  .img-left,
+  .img-right {
     max-width: 150px;
   }
 }
