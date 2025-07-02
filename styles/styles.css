@@ -213,13 +213,13 @@ footer {
 /* Mobile Adjustments */
 @media (max-width: 600px) {
   html, body {
-    margin: 0 !important;
+    margin: 5px !important;
     padding: 10px !important;
   }
 
   body > *:not(header):not(footer) {
     max-width: 100% !important;
-    margin: 0 !important;
+    margin: 5px !important;
     padding: 10px !important;
   }
 
