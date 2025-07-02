@@ -212,15 +212,14 @@ footer {
 
 /* Mobile Adjustments */
 @media (max-width: 600px) {
-  html, body {
-    margin: 5px !important;
-    padding: 10px !important;
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   body > *:not(header):not(footer) {
-    max-width: 100% !important;
-    margin: 5px !important;
-    padding: 10px !important;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   header,
