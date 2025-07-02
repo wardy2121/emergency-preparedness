@@ -217,8 +217,9 @@ footer {
   }
 
   body > *:not(header):not(footer) {
-    max-width: 100% !important;
-    padding: 0 !important;
+    margin: 0 8px;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   header,
