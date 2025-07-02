@@ -212,6 +212,23 @@ footer {
 
 /* Mobile Adjustments */
 @media (max-width: 600px) {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body > *:not(header):not(footer) {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  header,
+  footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   table {
     font-size: 0.85rem;
   }
@@ -233,7 +250,7 @@ footer {
     font-size: 0.9rem;
   }
 
-  /* Stack Header Layout */
+  /* STACK HEADER: logo on top, then title, then nav */
   header {
     flex-direction: column;
     align-items: center;
@@ -258,14 +275,8 @@ footer {
     flex-wrap: wrap;
     gap: 10px;
   }
-
-  /* Remove margins on mobile */
-  body > *:not(header):not(footer) {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
+
 
 /* Smaller floated images */
 @media (max-width: 400px) {
