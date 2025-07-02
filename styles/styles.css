@@ -1,24 +1,14 @@
 /* General Page Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #00838f; /* Margin color */
+  margin: 0 auto;               /* center horizontally */
+  max-width: 1200px;            /* max width for large screens */
+  padding-left: 20px;           /* some side padding so content doesn't hug edges */
+  padding-right: 20px;
+  background-color: #f0f6f5;    /* light tealish color from your palette for outer background */
   color: #333;
   line-height: 1.6;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 1200px; /* Max content width */
-  width: 100%;
-  background-color: #f9f9f9; /* Page background */
-  box-sizing: border-box;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow */
+  box-sizing: border-box;       /* ensures padding included in width */
 }
 
 /* Header container */
