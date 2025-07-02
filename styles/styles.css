@@ -218,7 +218,6 @@ footer {
 
   body > *:not(header):not(footer) {
     margin: 0 8px;
-    padding: 0;
     box-sizing: border-box;
   }
 
