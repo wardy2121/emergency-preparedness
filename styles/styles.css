@@ -352,3 +352,23 @@ footer {
     max-width: 150px;
   }
 }
+
+@media (max-width: 768px) {
+  .flip-card-container {
+    flex-direction: column;
+    gap: 25px;
+    max-width: 320px; /* fits one card nicely */
+    margin: 20px auto;
+  }
+
+  .flip-card {
+    width: 100%;
+    max-width: 320px;
+    height: auto; /* allow height to adjust */
+  }
+
+  .june-title {
+    font-size: 1.5rem;
+    margin: 25px 10px 15px 10px;
+  }
+}
