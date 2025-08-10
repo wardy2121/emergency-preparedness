@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - Preparação pra Emergência</title>
+  <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="../index.html"><img src="../images/logo.png" alt="Logo Preparação pra Emergência" /></a>
+    </div>
+    <div class="header-content">
+      <h1 class="header-title">Preparação pra Emergência</h1>
+      <nav>
+        <a href="../index.html">Início</a>
+        <a href="julho.html">Mês Atual</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Contato</h1>
+    <p>Estamos aqui para ajudar! Por favor, envie suas dúvidas, sugestões ou pedidos de assistência usando o formulário abaixo.</p>
+
+    <form action="mailto:seu-email@exemplo.com" method="POST" enctype="text/plain" class="contact-form">
+      <label for="name">Nome:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="message">Mensagem:</label><br />
+      <textarea id="message" name="message" rows="6" required></textarea><br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p>Ou entre em contato diretamente pelo email: <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a></p>
+
+    <section class="contacts">
+      <h2>Contatos da Preparação para Emergências</h2>
+      <ul>
+        <li><strong>Nancy M. Veit</strong><br />
+          Especialista de Preparação para Emergências da Estaca<br />
+          Telefone: <a href="tel:8016802868">801-680-2868</a>
+        </li>
+        <li><strong>Tyler D. Ward</strong><br />
+          Especialista de Preparação para Emergências da Ala<br />
+          Telefone: <a href="tel:2532093039">253-209-3039</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <a href="../site-plan.html" class="footer-right">Site Plan</a>
+  </footer>
+</body>
+</html>
