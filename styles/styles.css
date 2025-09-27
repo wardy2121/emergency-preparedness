@@ -352,16 +352,3 @@ footer {
     max-width: 150px;
   }
 }
-
-
-@media (max-width: 600px) {
-  .img-left,
-  .img-right {
-    float: none;
-    display: block;
-    margin: 0 auto 15px auto;
-    max-width: 80%; /* make images smaller and fit nicely */
-    width: auto;
-    height: auto;
-  }
-}
